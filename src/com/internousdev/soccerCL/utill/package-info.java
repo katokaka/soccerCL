@@ -1,8 +1,6 @@
 /**
- * 
+ * アクションクラスを補助するクラス群です
+ * @author Y.Gouda
+ * @since 2015/4/30
  */
-/**
- * @author shotakato
- *
- */
-package com.internousdev.soccerCL.utill;
+package jp.co.internous.gpscoffee.util;

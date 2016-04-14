@@ -180,12 +180,8 @@
 		method="execute">
 		<result name="success">/WEB-INF/hidden-jsp/Task.jsp</result>
 		</action>
-	</package>
-</struts>
-
-
-		
-		<!-- 加藤記載 -->
+	
+	<!-- 加藤記載 -->
 		<!-- 商品詳細画面へと遷移するためのアクション -->
 		<action name="GoMatchDetailAction" class="com.internousdev.soccerCL.action.GoMatchDetailAction"
 		method="execute">
@@ -193,7 +189,7 @@
 		<result name="error">/Index.jsp</result>
 		</action>
 		
-		
+
 	</package>
 </struts>
 
