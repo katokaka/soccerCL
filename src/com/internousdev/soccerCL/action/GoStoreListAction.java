@@ -1,11 +1,11 @@
-package jp.co.internous.gpscoffee.action;
+package com.internousdev.soccerCL.action;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.co.internous.gpscoffee.dao.GoStoreListDAO;
-import jp.co.internous.gpscoffee.dto.StoreListDTO;
-import jp.co.internous.gpscoffee.util.ActionClass;
+import com.internousdev.soccerCL.dao.GoStoreListDAO;
+import com.internousdev.soccerCL.dto.StoreListDTO;
+import com.internousdev.soccerCL.utill.ActionClass;
 
 /**
  * GoStoreListAction 店舗一覧情報を取得するアクションクラス
@@ -14,6 +14,10 @@ import jp.co.internous.gpscoffee.util.ActionClass;
  * @version 1.0
  */
 public class GoStoreListAction extends ActionClass {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1738460950890139279L;
 	/**
 	 * @author Y.Yamazaki
 	 * @since 2015/05/01

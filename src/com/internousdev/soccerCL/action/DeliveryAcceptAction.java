@@ -1,18 +1,18 @@
-package jp.co.internous.gpscoffee.action;
+package com.internousdev.soccerCL.action;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.co.internous.gpscoffee.dao.DeliveryAcceptDAO;
-import jp.co.internous.gpscoffee.dto.ReservationDTO;
-import jp.co.internous.gpscoffee.util.ActionClass;
+import com.internousdev.soccerCL.dto.ReservationDTO;
+
+
 /**
  * DeliveryAcceptAction　提供完了ボタンが押下された際の処理を行うアクションクラス
  * @author Y.Matsukawa
  * @since 2015/5/02
  * @version 1.0
  */
-public class DeliveryAcceptAction extends ActionClass{
+public class DeliveryAcceptAction extends com.internousdev.soccerCL.utill.ActionClass{
 	/**
 	 * @author Y.Matsukawa
 	 * @since 2015/05/02
@@ -46,7 +46,7 @@ public class DeliveryAcceptAction extends ActionClass{
 	 */
 	public String execute() {
 		reservation = (List<ReservationDTO>)sessionMap.get("reservation");
-		DeliveryAcceptDAO dao = new DeliveryAcceptDAO();
+		DeliveryAcceptAction dao = new DeliveryAcceptAction();
 		try{
 			if(premiumId != null){
 				if(drink != 0){
@@ -84,6 +84,15 @@ public class DeliveryAcceptAction extends ActionClass{
 
 		}
 		return result;
+	}
+	private void delete(int inquiry2) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+	private boolean insert(int shopId2, int inquiry2, String premiumId2, String beanName2, int beanRoast2,
+			int beanGrind2, int gram2, int drink2, int totalAmount2, int orderCode2) {
+		// TODO 自動生成されたメソッド・スタブ
+		return false;
 	}
 	/**
 	 * 予約情報取得メソッド

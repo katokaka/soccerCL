@@ -3,4 +3,4 @@
  * @author Y.Gouda
  * @since 2015/4/30
  */
-package jp.co.internous.gpscoffee.util;
+package com.internousdev.soccerCL.utill;

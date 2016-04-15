@@ -1,5 +1,7 @@
 package com.internousdev.soccerCL.action;
 
+import com.internousdev.soccerCL.utill.ActionClass;
+
 /**
  * DeleteCartAction
  * カートの中のセッション情報を全て削除する

@@ -118,14 +118,15 @@ public class GoMatchDetailAction extends ActionSupport implements SessionAware {
 		//試合名を取得できたかを確認するメソッド
 		if(matchName!= null){
 			System.out.println("名前はきてる？");
+			System.out.println(matchName);
 			
 		}else{
 			System.out.println("name");
 			return ERROR;
 		}
-		try {
+		try {			
 			if(matchName=="レアルマドリードVSバルセロナ"){
-
+				System.out.println(matchName);
 				hotel1="Hotel The Serras";
 				hotel2="カサ キャンパー";
 				hotel3="ホテル1989";
@@ -164,6 +165,7 @@ public class GoMatchDetailAction extends ActionSupport implements SessionAware {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println(hotel1);
 		return SUCCESS;
 	}
 

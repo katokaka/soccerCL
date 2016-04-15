@@ -146,7 +146,7 @@ button {
 			</div>
 			<div class="button-align">
 				<center>
-					<s:submit type=button value="カートに入れる" />
+					<s:submit type="button" value="カートに入れる" />
 				</center>
 			</div>
 		</s:form>

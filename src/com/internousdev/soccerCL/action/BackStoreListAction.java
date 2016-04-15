@@ -4,6 +4,10 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.opensymphony.xwork2.ActionSupport;
+
+import com.internousdev.soccerCL.util.ActionClass;
+
 /**
  * BackStoreListAction
  * 既存のセッションを破棄して店舗一覧画面へ戻るアクションクラス
