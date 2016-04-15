@@ -182,7 +182,7 @@
 						<th class="col-xs-6 col-sm-6 col-md-6">特徴 <s:form
 								action="GoMatchDetailAction">
 								<tr class="active">
-									<input type="hidden" name="matchName" value="レアルマドリードVSバルセロナ">
+									<input type="hidden" name="matchName" value="レアルマドリードVSバルセロナ"/>
 									<td><s:submit type="button" value="詳細へ" />
 									<td>レアルマドリード VS バルセロナ</td>
 									<td>世界が大注目のクラシコ の観戦、カ ンプ・ノウへの観光などのバルサファンには堪らないプラン!!</td>
