@@ -189,7 +189,7 @@
 								</tr>
 							</s:form> <s:form action="GoMatchDetailAction">
 								<tr class="active">
-
+									<input type="hidden" name="matchName" value="バルセロナVSレアルマドリード"/>	
 									<td><s:submit value="詳細へ" /></td>
 
 									<td>
@@ -200,8 +200,8 @@
 								</tr>
 							</s:form> <s:form action="GoMatchDetailAction">
 								<tr class="active">
-									<td><s:submit type="button" value="詳細へ"
-											formaction="GoMatchDetailAction" /></td>
+								<input type="hidden" name="matchName" value="ドルトムントVSリバプール"/>	
+									<td><s:submit type="button" value="詳細へ"/></td>
 									<td>
 										<div name="matchName" value="">ドルトムントVSリバプール</div>
 									</td>
@@ -210,8 +210,8 @@
 								</tr>
 							</s:form> <s:form action="GoMatchDetailAction">
 								<tr class="active">
-									<td><s:submit type="button" value="詳細へ"
-											formaction="GoMatchDetailAction" /></td>
+								<input type="hidden" name="matchName" value="ドルトムントVSバイエルン"/>	
+									<td><s:submit type="button" value="詳細へ"/></td>
 									<td>
 										<div name="matchName" value="">ドルトムントVSバイエルン</div>
 									</td>

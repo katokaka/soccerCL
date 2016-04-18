@@ -16,10 +16,12 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class GoMatchDetailAction extends ActionSupport implements SessionAware {
 
+	
+
 	/**
-	 * シリアル番号の生成
+	 * シリアル番号
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -8954320105551065150L;
 
 	/**
 	 * セッション
@@ -125,8 +127,9 @@ public class GoMatchDetailAction extends ActionSupport implements SessionAware {
 			return ERROR;
 		}
 		try {			
-			if(matchName=="レアルマドリードVSバルセロナ"){
+			if(matchName.equals("レアルマドリードVSバルセロナ")){
 				System.out.println(matchName);
+				System.out.println("AAA");
 				hotel1="Hotel The Serras";
 				hotel2="カサ キャンパー";
 				hotel3="ホテル1989";
@@ -137,7 +140,7 @@ public class GoMatchDetailAction extends ActionSupport implements SessionAware {
 				img4="img/ka-sakanpe-ru04.jpg";
 				img5="img/Hotel198904.jpg";
 
-			}else if(matchName=="バルセロナVSレアルマドリード"){
+			}else if(matchName.equals("バルセロナVSレアルマドリード")){
 				hotel1="Hotel The Serras";
 				hotel2="カサ キャンパー";
 				hotel3="ホテル1989";
@@ -148,17 +151,29 @@ public class GoMatchDetailAction extends ActionSupport implements SessionAware {
 				img4="img/ka-sakanpe-ru04.jpg";
 				img5="img/Hotel198904.jpg";
 
-			}else if(matchName=="ドルトムントVSリバプール" || matchName=="ドルトムントVSバイエルン"){
+			}else if(matchName.equals("ドルトムントVSリバプール")){
 				hotel1="ロッコ フォルテ ザ チャールズ ホテル";
 				hotel2="プラッツル ホテル ミュンヘン";
 				hotel3="カプリ バイ フレーザー フランクフルト";
 				img1="img/dorutomunto04.jpg";
 				img2="img/liverpoor01.jpeg";
 				img3="img/rokko_forute_cya-ruzu06.jpg";
-				img4="img/platzl-hotel.jpg";
+				img4="img/platzl-hotel04.jpg";
 				img5="img/capri-by-fraser-frankfurt06.jpg";
 
+			}else if(matchName.equals("ドルトムントVSバイエルン")){
+				hotel1="ロッコ フォルテ ザ チャールズ ホテル";
+				hotel2="プラッツル ホテル ミュンヘン";
+				hotel3="カプリ バイ フレーザー フランクフルト";
+				img1="img/dorutomunto04.jpg";
+				img2="img/baierun02.jpeg";
+				img3="img/rokko_forute_cya-ruzu06.jpg";
+				img4="img/platzl-hotel04.jpg";
+				img5="img/capri-by-fraser-frankfurt06.jpg";
+				
 			}else{
+				System.out.println("失敗");
+				System.out.println(matchName);
 				return ERROR;
 			}
 
