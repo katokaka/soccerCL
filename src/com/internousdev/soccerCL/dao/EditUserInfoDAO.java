@@ -1,7 +1,5 @@
-package jp.co.internous.gpscoffee.dao;
+package com.internousdev.soccerCL.dao;
 
-import jp.co.internous.gpscoffee.util.DBconnector;
-import jp.co.internous.gpscoffee.util.DaoClass;
 
 /**
  * EditUserInfoDAO  DB内のpremium_membershipテーブルに存在する顧客情報を変更するDAOクラス
@@ -19,11 +17,12 @@ public class EditUserInfoDAO extends DaoClass {
     /**
      * 入力フォームから取得したIDとDBのpremium_membershipに存在するIDを比較するメソッド
      * @author Y.Narita
+     * @param <DBconnector>
      * @since 2015/05/08
      * @param findPremiumId    プレミアムID
      * @return res 例外処理に入らなければtrueを返す
      */
-    public boolean isCheckID(String findPremiumId){
+    public <DBconnector> boolean isCheckID(String findPremiumId){
         res = false ;
         try{
             con = DBconnector.getConnection();

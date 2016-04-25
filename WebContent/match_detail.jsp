@@ -78,7 +78,8 @@ button {
 					<td class="table-align"><img src="<s:property value="img1"/>"
 						width="342px" height="232px"></td>
 					<td align="center" class="table-align"><h5>
-							<s:property value="matchName"/>
+							<s:hidden name="matchName" value="" />
+							<s:property value="%{matchName}" />
 						</h5></td>
 					<td class="table-align"><img src="<s:property value="img2"/>"
 						width="342px" height="232px"></td>
@@ -93,19 +94,22 @@ button {
 					<div class="radiobuttun">
 						<input type="radio" name="myRB"
 							onClick="Gazou('<s:property value="img3"/>')" checked>
-						<s:property value="hotel1"/>
+						<input type="hidden" name="hotel" value="<s:property value="hotel1"/>" />
+						<s:property value="%{hotel1}" />
 						<br>
 					</div>
 					<div class="radiobuttun">
 						<input type="radio" name="myRB"
 							onClick="Gazou('<s:property value="img4"/>')">
-						<s:property value="hotel2" />
+						<input type="hidden" name="hotel" value="<s:property value="hotel2"/>" />
+						<s:property value="%{hotel2}" />
 						<br>
 					</div>
 					<div class="radiobuttun">
 						<input type="radio" name="myRB"
 							onClick="Gazou('<s:property value="img5"/>')">
-						<s:property value="hotel3" />
+						<input type="hidden" name="hotel" value="<s:property value="hotel3"/>" />
+						<s:property value="%{hotel3}" />
 						<br>
 					</div>
 				</form>
@@ -131,7 +135,7 @@ button {
 					<h3>Q3、人数は何人ですか?</h3>
 				</div>
 				<div class="radiobuttun">
-					<s:select name="numOfPeople"
+					<s:select name="lot"
 						list="#{ '1':'１人',
                                                  '2':'２人',
                                                  '3':'３人',
@@ -146,7 +150,7 @@ button {
 			</div>
 			<div class="button-align">
 				<center>
-					<s:submit type="button" value="カートに入れる" />
+					<s:submit type="button" value="カートに入れる"  />
 				</center>
 			</div>
 		</s:form>

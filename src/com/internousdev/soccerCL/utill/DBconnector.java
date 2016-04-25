@@ -6,72 +6,52 @@ import java.sql.SQLException;
 import com.mysql.jdbc.Connection;
 
 /**
- * DBconnecto
- * DB接続を管理するクラス
- * @author Y.Yamazaki
- * @since 2015/4/9
+ * MySQLの指定したデータベースに接続するutilクラス
+ * @author SHOUGO TOOI
  * @version 1.0
+ * @since 1.0
  */
-public class DBconnector {
-	/**
-	 * @author Y.Yamazaki
-	 * @since 2015/4/9
-	 * driverName		ドライブの名前
-	 * URL				ウェブサイトのアドレス
-	 * DB				データベース
-	 * URLplusDB		ウェブサイトのアドレスとデータベース
-	 * user				ユーザー
-	 * pass				パスワード
-	 */
-	private String driverName = "com.mysql.jdbc.Driver";
-	private String URL = "jdbc:mysql://";
-	private String hostName = "localhost";
-	private String DB = "gpscoffee";
-	private String user = "root";
-	private String pass = "mysql";
-	/**
-	 * ホスト名とデータベース名を変更できるコンストラクタ
-	 * @author Y.Gouda
-	 * @since 2015/5/7
-	 * @param hostName ホスト名
-	 * @param database データベース名
-	 */
-	public DBconnector(String hostName, String database) {
-		this.hostName = hostName;
-		this.DB = database;
-	}
-	/**
-	 * ホスト名を変更できるコンストラクタ
-	 * @author Y.Gouda
-	 * @since 2015/5/7
-	 * @param hostName ホスト名
-	 */
-	public DBconnector(String hostName){
-		this.hostName = hostName;
-	}
-	/**
-	 * 引数なしのデフォルトコンストラクタ
-	 * @author Y.Gouda
-	 * @since 2015/5/7
-	 */
-	public DBconnector(){
-	}
-	/**
-	 * データーベースと接続して管理するメソッド
-	 * @author Y.Gouda
-	 * @since 2015/4/9
-	 * @return con 例外処理に入らなければコネクションを返す
-	 */
-	public Connection getConnection(){
-		Connection con = null;
-		try {
-			Class.forName(driverName);
-			con = (Connection) DriverManager.getConnection(URL+hostName+"/"+DB, user, pass);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return con;
-	}
+public class DBconnector{
+
+    /**
+     * MySQLのドライバー名
+     */
+    private static String driverName = "com.mysql.jdbc.Driver";
+
+    /**
+     * MySQLのデータベースのURL
+     */
+    private static String url = "jdbc:mysql://localhost/";
+
+    /**
+     * MySQLのユーザー名
+     */
+    private static String user = "root";
+
+    /**
+     * MySQLのパスワード
+     */
+    private static String pass = "mysql";
+
+    /**
+     * MySQLの指定したデータベースに接続するメソッド
+     * @param database データベース
+     * @return con 指定したデータベースへのコネクション情報を返します。
+     */
+    public static Connection getConnection(String database){
+        url += database;
+        Connection con = null;
+        try{
+            Class.forName(driverName);
+            con = (Connection) DriverManager.getConnection(url,user,pass);
+        }
+        catch(ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+        url = "jdbc:mysql://localhost/";
+        return con;
+    }
 }
