@@ -1,6 +1,7 @@
 package com.internousdev.soccerCL.utill;
 
-
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
 
 public class MongoDBConnector {
 
@@ -9,8 +10,8 @@ public class MongoDBConnector {
 	 */
 	private MongoClient mc;
 	
-	public MongoDBConnector getConnection(){
-		MongoDBConnector db =null;
+	public MongoDatabase getConnection(){
+		MongoDatabase db =null;
 		mc = new MongoClient("localjpst",27017);
 		db =mc.getDatabase("soccerDb");
 		return db;
@@ -33,7 +34,4 @@ public class MongoDBConnector {
 	public void setMc(MongoClient mc) {
 		this.mc = mc;
 	}
-	
-	
-	
 }

@@ -14,9 +14,7 @@
 <link rel="stylesheet" href="./css/posting.css">
 </head>
 <body>
-
 	<jsp:include page="header.jsp" />
-
 	<div class="content">
 		<div class="box box-large">
 			<div class="title-back">
@@ -32,6 +30,7 @@
 						<table>
 							<tr>
 								<td>名前</td>
+								<?php echo $_post["postingName"]?>
 							</tr>
 							<tr>
 								<td><s:property value="postingName" /></td>
